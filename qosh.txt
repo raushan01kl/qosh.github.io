@@ -1,0 +1,316 @@
+modern_html_content = """
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qosh Keldiń - Қазақ тағамдары</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #013220; /* Темно изумрудный */
+            color: #fff;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+        header {
+            position: relative;
+            background: url('https://example.com/banner.jpg') no-repeat center center/cover;
+            height: 100vh;
+            text-align: center;
+            color: #ffd700;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        header h1 {
+            font-size: 4em;
+            animation: fadeInDown 1.5s ease-in-out;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(0, 51, 51, 0.9);
+            display: flex;
+            justify-content: space-around;
+            padding: 15px 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+        nav a {
+            text-decoration: none;
+            color: #ffd700;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .parallax {
+            background: url('https://example.com/kazakh_ornament.jpg') no-repeat center center/cover;
+            height: 400px;
+            position: relative;
+            z-index: -1;
+        }
+        .menu-item {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+            padding: 20px 0;
+        }
+        .menu-item div {
+            background-color: #005533;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .menu-item div:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+        footer {
+            text-align: center;
+            background-color: #005533;
+            padding: 20px;
+            border-top: 5px solid #ffd700;
+        }
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#about">Біз туралы</a>
+        <a href="#menu">Ас мәзірі</a>
+        <a href="#contact">Байланыс</a>
+    </nav>
+    <header>
+        <h1>Qosh Keldiń</h1>
+    </header>
+    <section id="about">
+        <h2>Біз туралы</h2>
+        <p>Біздің миссиямыз – ұлттық тағамдарды әлемге танытып, заманауи тәсілдермен ұсыну.</p>
+<section id="employees">
+    <h2>Қызметкерлер</h2>
+    <div class="employee-list">
+        <div class="employee-card">
+            <img src="https://photos.google.com/photo/AF1QipNz7Kywy0hyaokNqTJZD9-xLdvJgEewtcTA-W3y">
+            <h3>Тулешова Бибіфатима</h3>
+            <p>Бас аспаз</p>
+        </div>
+        <div class="employee-card">
+            <img src="">
+            <h3>Қали Раушан</h3>
+            <p>Менеджер</p>
+        </div>
+        <div class="employee-card">
+            <img src="">
+            <h3>Маратқызы Фариза</h3>
+            <p>Десерт шебері</p>
+        </div>
+        <div class="employee-card">
+            <img src="">
+            <h3>Бердіахмет Динара</h3>
+            <p>Десерт шебері</p>
+        </div>
+
+    </div>
+</section>
+<style>
+    #employees {
+        padding: 50px 20px;
+        background-color: #005533;
+        color: #fff;
+        text-align: center;
+    }
+    .employee-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    .employee-card {
+        background-color: #013220;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        width: 250px;
+        text-align: center;
+    }
+    .employee-card img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 15px;
+    }
+    .employee-card h3 {
+        margin: 10px 0 5px;
+        font-size: 1.5em;
+    }
+    .employee-card p {
+        margin: 0;
+        font-size: 1.2em;
+    }
+</style>
+    <section id="menu">
+    <h2>Ас мәзірі</h2>
+    <div class="menu-category">
+        <h3 onclick="toggleMenu('national-dishes')">Ұлттық тағамдар түрлері</h3>
+        <ul id="national-dishes" class="hidden">
+            <li>Бешбармақ</li>
+            <li>Қуырдық</li>
+            <li>Палау:
+                <ul>
+                    <li>Сиыр етімен</li>
+                    <li>Тауық етімен</li>
+                </ul>
+            </li>
+            <li>Қуырылған балық</li>
+            <li>Сорпа:
+                <ul>
+                    <li>Шорпа</li>
+                    <li>Күріш сорпасы</li>
+                    <li>Кеспе сорпа</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="menu-category">
+        <h3 onclick="toggleMenu('drinks')">Сусындар</h3>
+        <ul id="drinks" class="hidden">
+            <li>Қымыз</li>
+            <li>Шұбат</li>
+            <li>Қатық</li>
+            <li>Айран</li>
+        </ul>
+    </div>
+    <div class="menu-category">
+        <h3 onclick="toggleMenu('desserts')">Десерт түрлері</h3>
+        <ul id="desserts" class="hidden">
+            <li>Бауырсақ:
+                <ul>
+                    <li>Қаймақпен</li>
+                    <li>Балмен</li>
+                    <li>Джеммен</li>
+                    <li>Түрлі соустармен</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</section>
+<style>
+    .menu-category {
+        margin: 30px 0;
+        text-align: center;
+    }
+    .menu-category h3 {
+        font-size: 2.5em; /* Мәзір атауларын үлкейту */
+        font-weight: bold;
+        cursor: pointer;
+        color: #ffd700;
+        background-color: #013220;
+        padding: 15px 20px;
+        border-radius: 10px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+    .menu-category h3:hover {
+        background-color: #005533;
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    }
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 20px 0;
+        text-align: left;
+        color: #fff;
+        font-size: 1.5em; /* Тізімдердің өлшемін ұлғайту */
+    }
+    ul ul {
+        margin-left: 30px;
+        font-size: 1.2em;
+    }
+    ul li {
+        margin: 10px 0;
+    }
+    .hidden {
+        display: none;
+    }
+</style>
+<style>
+    .menu-category {
+        margin: 30px 0;
+        text-align: center;
+    }
+    .menu-category h3 {
+        font-size: 2em; /* Мәзір атауларын үлкейту */
+        font-weight: bold;
+        cursor: pointer;
+        color: #ffd700;
+        background-color: #013220;
+        padding: 15px;
+        border-radius: 10px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    }
+    .menu-category h3:hover {
+        background-color: #005533;
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    }
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 20px 0;
+        color: #fff;
+    }
+    ul ul {
+        margin-left: 20px;
+        font-size: 1.2em;
+    }
+    ul li {
+        margin: 10px 0;
+    }
+</style>
+<script>
+    function toggleMenu(menuId) {
+        const menu = document.getElementById(menuId);
+        if (menu.classList.contains('hidden')) {
+            menu.classList.remove('hidden');
+        } else {
+            menu.classList.add('hidden');
+        }
+    }
+</script>
+    <div class="parallax"></div>
+    <section id="contact">
+        <h2>Байланыс</h2>
+        <p>Электрондық пошта: info@qoshkeldin.com</p>
+        <p>Телефон: +7 777 123 4567</p>
+    </section>
+    <footer>
+        &copy; 2024 Qosh Keldiń. Барлық құқықтар қорғалған.
+    </footer>
+</body>
+</html>
